@@ -31,9 +31,11 @@
 *.out
 *.app
 
-.vs/
+**/.vs/
+**/.vscode/
 **/x86/
 **/x64/
 **/Debug/
 **/Release/
+**/packages/
 **/*.tlog/
