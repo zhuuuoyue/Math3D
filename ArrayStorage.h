@@ -8,8 +8,7 @@
 M3D_BEGIN
 
 template<typename T, size_t R, size_t C>
-class ArrayStorage
-{
+class ArrayStorage {
 public:
 
     using value_type = T;
@@ -110,8 +109,7 @@ private:
 };
 
 template<typename T, size_t R, size_t C>
-class InvalidArrayStorage
-{
+class InvalidArrayStorage {
 public:
 
     using value_type = T;
@@ -147,20 +145,17 @@ public: \
     using Base::COLUMNS;
 
 template<typename T, size_t C>
-class ArrayStorage<T, 0, C> : public InvalidArrayStorage<T, 0, C>
-{
+class ArrayStorage<T, 0, C> : public InvalidArrayStorage<T, 0, C> {
     DEFINE_BASE_AND_USE_DEFINITIONS(T, 0, C)
 };
 
 template<typename T, size_t R>
-class ArrayStorage<T, R, 0> : public InvalidArrayStorage<T, R, 0>
-{
+class ArrayStorage<T, R, 0> : public InvalidArrayStorage<T, R, 0> {
     DEFINE_BASE_AND_USE_DEFINITIONS(T, R, 0)
 };
 
 template<typename T>
-class ArrayStorage<T, 0, 0> : public InvalidArrayStorage<T, 0, 0>
-{
+class ArrayStorage<T, 0, 0> : public InvalidArrayStorage<T, 0, 0> {
     DEFINE_BASE_AND_USE_DEFINITIONS(T, 0, 0)
 };
 
